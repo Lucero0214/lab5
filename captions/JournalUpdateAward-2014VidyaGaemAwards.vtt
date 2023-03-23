@@ -1,0 +1,132 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:01:02.000 --> 00:01:02.500
+Written by
+
+00:01:02.500 --> 00:01:07.580
+Matt and Trey themselves, South Park: The Stick of Truth
+ was probably one of the best
+
+00:01:07.580 --> 00:01:11.390
+transitions from televised series to video
+game we’ve seen yet.
+
+00:01:11.390 --> 00:01:16.390
+There’s been a small handful of South Park
+games in the past that the duo just passed
+
+00:01:16.390 --> 00:01:19.850
+off to the developers, and the quality showed.
+
+00:01:19.850 --> 00:01:22.360
+This time, however, things were different.
+
+00:01:22.360 --> 00:01:26.710
+Working hands on with the developers, Matt
+Stone and Trey Parker wrote the script to
+
+00:01:26.710 --> 00:01:31.460
+probably the most crass, and hilarious game
+this year.
+
+00:01:31.460 --> 00:01:37.850
+Stick of Truth went directions many developers
+are afraid to take, and the result paid off.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <title>HTML5 Video with JS synchronized cuepoints: demo</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css/styles.css" />
+        <script type="module" src="script/script.js"></script>
+        <title>Video and audio</title>
+</head>
+<body>
+    <h1> Video</h1>
+    <h2>video displays</h2>
+
+    <main id="container">
+        <section class="col1">
+            <video id="vid" width="352" controls>
+                <source src="assets/JournalUpdateAward-2014VidyaGaemAwards.mp4" type="video/mp4">
+                <source src="assets/JournalUpdateAward-2014VidyaGaemAwards.ogv" type="video/webm">
+                <source src="assets/ActuallyKindOfFunAward-2014VidyaGaemAwards.ogv" type="video/ogv">
+
+                <!--Video captions-->
+
+                <track id="en" kind="captions" label="English(captions)" srclang="en" src="captions/JournalUpdateAward-2014VidyaGaemAwards.vtt" default>
+                <!--fallback to text-->
+                <h2>JournalUpdateAward-2014VidyaGaemAwards</h2>
+                <p>Written by Matt and Trey themselves, South Park: The Stick of Truth
+                    was probably one of the best transitions from televised series to video
+                    game we’ve seen yet.
+                </p>There’s been a small handful of South Park
+                games in the past that the duo just passed off to the developers, and the quality showed.
+                <p>This time, however, things were different.
+                </p>  
+                <p>Working hands on with the developers, Matt probably the most crass, and hilarious game
+                    this year.
+                </p>
+                <p> Stick of Truth went directions many developers are afraid to take, and the result paid off.
+                </p>      
+            </video>
+
+<div id="controls">
+    <form id="video_form">
+        <fieldset>
+            <legend>film controls</legend>
+            <input type="button" id="play_button" onclick="playVideo(vid)" value="Play" />
+            <input type="button" id="pause_button" onclick="pauseVideo(vid)" value="Pause" />
+            <input type="button" id="mute" onclick="muteVid(vid)" value="Mute" />
+            <input type="button" id="unmute" onclick="unmuteVid(vid)" value="Unmute" />
+
+            <fieldset>
+                <legend>Timestamped</legend>
+            <input type="button" id="rewind" onclick="seekVideo(vid, 0)" value="Beginning" />
+            <input type="button" id="end" onclick="seekVideo(vid, 98)" value="End" />
+            <input type="button" id="seek" onclick="seekVideo(vid, 55)" value="Go to the middle" />
+            </fieldset>
+            <fieldset>
+                <legend>Select a video to watch</legend>
+                <select id="video_select">
+                    <option>Select the video to play...</option>
+                    <option value="assets/ActuallyKindOfFunAward-2014VidyaGaemAwards.mp4">ActuallyKindOfFunAward-2014VidyaGaemAwards(mp4)</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Select a caption/subtitle to read</legend>
+                <select id="text-track">
+                    <option>Select a subtitle language...</option>
+                    <option value="en">English caption</option>
+                </select>
+
+            </fieldset>
+            <fieldset>
+                <legend>Playback speed</legend>
+                <p class="slowmo">Currently, rewind only works in Safari</p>
+                    <input type=button id="rw" onclick="playRate(vid,-1)" value="&lt; &lt;rewind" />
+                
+                <input type=button id="ff" onclick="playRate(vid,2)" value="fast forward >>" />
+                <input type=button id="slow" onclick="playRate(vid,.5)" value="slow mo >" />
+                <input type=button id="normal" onclick="playRate(vid,1)" value="normal >" />
+        </fieldset>
+    </form>
+</div>
+<div class="pop">
+    <p>Test it!</p>
+</div>
+<div class="show-captions">
+    <h3><a id="show-hide" href="#">Show Transcript</a></h3>
+    <a id="transcript-en" href="#">English</a>
+</div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
