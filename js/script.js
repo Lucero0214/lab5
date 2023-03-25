@@ -40,7 +40,7 @@ function init() {
                 { seconds: 65, callback: func5 }
             ];
 
-                cueTimer.setup("vid", myCues);
+            cueTimer.setup("vid", myCues);
 
             } else if(e.target.value == 'assets/NewChallengerAward-2014VidyaGaemAwards.mp4') {
 
@@ -64,23 +64,7 @@ function init() {
             e.preventDefault();
             webvttTranscript("captions/JournalUpdateAward-2014VidyaGaemAwards.vtt", display);
         });
-     // initialize text transcript display (Spanish)
-     transcript_es.addEventListener(
-        "click",
-        function (e) {
-            e.preventDefault();
-            webvttTranscript("subtitles/spanish.vtt", display);
-        });
-
-    // initialize text transcript display (French)
-    transcript_fr.addEventListener(
-        "click",
-        function (e) {
-            e.preventDefault();
-            webvttTranscript("subtitles/french.vtt", display);
-        });
-
-        
+       
     showHide.addEventListener(
         "click",
         function (e) {
@@ -99,8 +83,9 @@ function init() {
 //You can code up whatever behavior you need in your own callbacks
 
 function func1() {
-    document.querySelector("#vid").style = "outline : 10px solid red";
+    document.querySelector("#vid").style = "outline : 10px solid purple";
 }
+
 function func2() {
     let pop = document.querySelector(".pop");
     pop.innerHTML = "<p>Ohh Snap!</p>";
@@ -121,7 +106,7 @@ function func3() {
 }
 
 function func4() {
-    document.querySelector("#web").src ="images/studio1.jpg";
+    document.querySelector("#web").src = "images/studio2.jpg";
     }      
 
     function func5() {
