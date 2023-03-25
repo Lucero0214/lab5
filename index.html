@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <head>
-        <title>HTML5 Video with JS synchronized cuepoints: demo</title>
+       <title>Video and audio</title>
         <meta charset="utf-8">
 
         <link rel="stylesheet" href="styles.css" />
         <script src="js/video_helpers.js" defer></script>
         <script src="j/transcript.js" defer></script>
         <script type="modules" src="js/script.js"></script>
-        <title>Video and audio</title>
+      
 </head>
 
 <body>
@@ -20,29 +19,21 @@
 
         <section class="col1">
 
-            <video id="vid" width="352" controls>
-                <source src="assets/JournalUpdateAward-2014VidyaGaemAwards.mp4" type="video/mp4">
-                <source src="assets/JournalUpdateAward-2014VidyaGaemAwards.webm" type="video/webm">
-                <source src="assets/JournalUpdateAward-2014VidyaGaemAwards.ogv" type="video/ogv">
+         <video id="vid" width="352" controls>
+            <source src="assets/JournalUpdateAward-2014VidyaGaemAwards.mp4" type="video/mp4">
+            <source src="assets/JournalUpdateAward-2014VidyaGaemAwards.webm" type="video/webm">
+            <source src="assets/JournalUpdateAward-2014VidyaGaemAwards.ogv" type="video/ogv">
+            <track id="en" kind="captions" label="English (captions)" srclang="en" src="captions/JournalUpdateAward-2014VidyaGaemAwards.vtt" default>
 
-                <!--Video captions-->
-
-                <track id="en" kind="captions" label="English(captions)" srclang="en" src="captions/JournalUpdateAward-2014VidyaGaemAwards.vtt" default>
-                <!--fallback to text-->
-                <h2>JournalUpdateAward-2014VidyaGaemAwards</h2>
-                <p>Written by Matt and Trey themselves, South Park: The Stick of Truth
-                    was probably one of the best transitions from televised series to video
-                    game we’ve seen yet.
-                </p>There’s been a small handful of South Park
-                games in the past that the duo just passed off to the developers, and the quality showed.
-                <p>This time, however, things were different.
-                </p>  
-                <p>Working hands on with the developers, Matt probably the most crass, and hilarious game
-                    this year.
-                </p>
-                <p> Stick of Truth went directions many developers are afraid to take, and the result paid off.
-                </p>      
-            </video>
+			<track id="en-challenge" kind="captions" label="challenge (captions)" srclang="en" src="captions/challenge.vtt">
+   
+            <!--fallback to text-->
+            <h2>JournalUpdateAward-2014VidyaGaemAwards</h2>
+             <p>Written by Matt and Trey themselves, South Park: The Stick of Truth was probably one of the best transitions from televised series to video game we’ve seen yet.</p>
+             <p>There’s been a small handful of South Park games in the past that the duo just passed off to the developers, and the quality showed.This time, however, things were different.</p>  
+            <p>Working hands on with the developers, Matt probably the most crass, and hilarious game this year.</p>
+            <p> Stick of Truth went directions many developers are afraid to take, and the result paid off.</p>      
+       </video>
 
 <div id="controls">
     <form id="video_form">
@@ -59,12 +50,14 @@
             <input type="button" id="end" onclick="seekVideo(vid, 98)" value="End" />
             <input type="button" id="seek" onclick="seekVideo(vid, 55)" value="Go to the middle" />
             </fieldset>
-            <fieldset>
-                <legend>Select a video to watch</legend>
-                <select id="video_select">
-                    <option>Select the video to play...</option>
-                    <option value="assets/JournalUpdateAward-2014VidyaGaemAwards.mp4">JournalUpdateAward-2014VidyaGaemAwards(mp4)</option>
-                </select>
+        </fieldset>    
+        <fieldset>
+            <legend>Select a video to watch</legend>
+            <select id="video_select">
+                <option>Select the video to play...</option>
+                <option value="assets/JournalUpdateAward-2014VidyaGaemAwards.mp4">JournalUpdateAward-2014VidyaGaemAwards(mp4)</option>
+                <option value="assets/NewChallengerAward-2014VidyaGaemAwards.mp4">NewChallengerAward-2014VidyaGaemAwards(mp4)</option>
+              </select>
             </fieldset>
             <fieldset>
                 <legend>Select a caption/subtitle to read</legend>
@@ -101,7 +94,7 @@
 
    <section class="col2">
         <iframe id="web" src="start.html"></iframe>
-</section>
+    </section>
 
 
     </main>
