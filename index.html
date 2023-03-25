@@ -4,16 +4,22 @@
     <head>
         <title>HTML5 Video with JS synchronized cuepoints: demo</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="styles.css/styles.css" />
-        <script type="module" src="script/script.js"></script>
+
+        <link rel="stylesheet" href="styles.css" />
+        <script src="js/video_helpers.js" defer></script>
+        <script src="j/transcript.js" defer></script>
+        <script type="modules" src="js/script.js"></script>
         <title>Video and audio</title>
 </head>
+
 <body>
-    <h1> Video</h1>
+    <h1> Video Game Awards</h1>
     <h2>video displays</h2>
 
     <main id="container">
+
         <section class="col1">
+
             <video id="vid" width="352" controls>
                 <source src="assets/JournalUpdateAward-2014VidyaGaemAwards.mp4" type="video/mp4">
                 <source src="assets/JournalUpdateAward-2014VidyaGaemAwards.webm" type="video/webm">
@@ -41,14 +47,14 @@
 <div id="controls">
     <form id="video_form">
         <fieldset>
-            <legend>film controls</legend>
+            <legend>Playback controls</legend>
             <input type="button" id="play_button" onclick="playVideo(vid)" value="Play" />
             <input type="button" id="pause_button" onclick="pauseVideo(vid)" value="Pause" />
             <input type="button" id="mute" onclick="muteVid(vid)" value="Mute" />
             <input type="button" id="unmute" onclick="unmuteVid(vid)" value="Unmute" />
 
             <fieldset>
-                <legend>Timestamped</legend>
+                <legend>Chapter Links </legend>
             <input type="button" id="rewind" onclick="seekVideo(vid, 0)" value="Beginning" />
             <input type="button" id="end" onclick="seekVideo(vid, 98)" value="End" />
             <input type="button" id="seek" onclick="seekVideo(vid, 55)" value="Go to the middle" />
@@ -78,16 +84,25 @@
                 <input type=button id="normal" onclick="playRate(vid,1)" value="normal >" />
         </fieldset>
     </form>
+
 </div>
-<div class="pop">
+
+<div class="pop hide">
     <p>Test it!</p>
 </div>
+
 <div class="show-captions">
     <h3><a id="show-hide" href="#">Show Transcript</a></h3>
     <a id="transcript-en" href="#">English</a>
+    <div id="transcript"></div>
 </div>
 
-        </section>
+   </section>
+
+   <section class="col2">
+        <iframe id="web" src="start.html"></iframe>
+</section>
+
 
     </main>
 
