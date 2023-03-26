@@ -11,7 +11,7 @@ function init() {
     { seconds: 25, callback: func3 },
     { seconds: 55, callback: func4 },
     { seconds: 65, callback: func5 }
-];
+  ];
 
     // setup the cuepoint timer
     cueTimer.setup("vid", myCues);
@@ -46,7 +46,7 @@ function init() {
 
                 myCues.splice(0, myCues.length);
                 selectTrack(null, vid, 'en-challenge');
-  }
+         }
 // finally, swap the video to play
            selectVideo(e, vid);
         });
@@ -64,29 +64,15 @@ function init() {
             e.preventDefault();
             webvttTranscript("captions/JournalUpdateAward-2014VidyaGaemAwards.vtt", display);
         });
-       
-    showHide.addEventListener(
-        "click",
-        function (e) {
-            e.preventDefault();
-            webvttTranscript("subtitles/french.vtt", display);
-            if (e.target.innerHTML == "Show Transcript") {
-                e.target.innerHTML = "Hide Transcript";
-                display.style.display = "block";
-            } else {
-                e.target.innerHTML = "Show Transcript";
-                display.style.display = "none";
-            }
-        });
 }
 //the custom callback functions to trigger when a cuepoint is hit.
 //You can code up whatever behavior you need in your own callbacks
 
-function func1() {
+    function func1() {
     document.querySelector("#vid").style = "outline : 10px solid purple";
 }
 
-function func2() {
+    function func2() {
     let pop = document.querySelector(".pop");
     pop.innerHTML = "<p>Ohh Snap!</p>";
     document.querySelector(".pop").classList.toggle("hide");
@@ -94,18 +80,18 @@ function func2() {
         document.querySelector(".pop").classList.toggle("hide");
     }, 2000);
 }
-function func3() {
+    function func3() {
     const pop = document.querySelector(".pop");
     pop.innerHTML = "<p>Hello</p>";
     pop.classList.toggle("hide");
     setTimeout(() => {
         document.querySelector(".pop").classList.toggle("hide");
     }, 2000);
-    document.querySelector("#vid").style = "outline: 0px solid red";
-    document.querySelector("#web").src = "images/studio1.jpg";
+    document.querySelector("#vid").style = "outline: 0px solid ";
+    document.querySelector("#web").src = "images/studio.jpg";
 }
 
-function func4() {
+    function func4() {
     document.querySelector("#web").src = "images/studio2.jpg";
     }      
 

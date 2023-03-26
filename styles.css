@@ -3,8 +3,7 @@
 }
 
 body{
-    padding:0;
-    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
     background-color: #D8D8D8;
 }
 h1 , h2 {
@@ -13,7 +12,7 @@ h1 , h2 {
 }
 #container {
     display: grid;
-    grid-gap: 1rem;
+    grid-gap: 2rem;
     grid-template-columns: 1fr 2fr;
     position: relative;
     margin: auto;
@@ -26,12 +25,11 @@ h1 , h2 {
     
 }
 .col1 {
-    margin: 0 auto;
     border: 1px solid #408e91;
     height: fit-content;
 }
 .col2 {
-    height: 70vh;
+    height: 100vh;
 }
 
 fieldset {
